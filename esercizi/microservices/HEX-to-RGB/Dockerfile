@@ -1,6 +1,8 @@
 FROM node:alpine
 COPY . .
-COPY ../commons/model/Color.ts .
+WORKDIR /microservices
+COPY /commons/model/Color.ts /HEX-to-RGB
+WORKDIR /microservices/HEX-to-RGB
 RUN npm install
 EXPOSE 3000
 CMD npm start
