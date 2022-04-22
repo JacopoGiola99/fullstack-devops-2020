@@ -13,6 +13,7 @@ services:
       - HEX-to-RGB
   
   HEX-to-RGB:
+    build: ../HEX-to-RGB
     image: hex2rgb
     restart: "no"
     labels:
